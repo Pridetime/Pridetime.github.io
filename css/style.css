@@ -1,200 +1,268 @@
-.main {
-	display:table;
-	width:100%;
-	text-align: center;
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+body {
+	min-width: 960px;
+	font-size: 14px;
+	line-height: 24px;
 	color: #fff;
-	height: 100vh;
-	/*background: #000 url("../main-bg.jpg") center center no-repeat;*/
-	position: relative;
-	}
-a:active, a:visited, a:focus{
-	text-decoration:none;
-	outline:none;
+	background-color: #000;
 }
-.main h1{
-	margin:0;
-	margin-bottom:10px;
-	font-size: 4.8rem;
-}
-.main p{
-	font-size: 3rem;
-}
-.wrapper {
-	display:table-cell;
-	vertical-align:middle;
-}
-.main-line {
-	width:30rem;
-	height:1px;
-	background-color:#fff;
+.container {
+	width: 940px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
-.main-overlay{
-	position:absolute;
-	width:100%;
-	height:100%;
-	background-color: rgba(0,0,0,0.5);
-	z-index:1;
+.main-navigation .half-active {
+	color: rgba(255,255,255,.8);
 }
-.main-header{
-	position:relative;
-	z-index:2;
+.main-navigation .active {
+	color: #fff;
 }
 
-html {
-	font-size:10px;
+/*Header начало*/
+
+.main-header {
+	background: #202020;
 }
-.main-down{
+.main-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	padding-left: 70px;
+}
+.main-navigation li {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 16px;
+	line-height: 20px;
+	font-family: 'Source Code Pro', monospace;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 30px 0;
+}
+.main-navigation .logo {
+	font-size: 18px;
+    line-height: 21px;
+    color: #E7AA74;
+    font-weight: bold;
+}
+.main-navigation a {
+	color: #999993;
+    font-family: 'Source Code Pro', monospace;
+    line-height: 12px;
+    letter-spacing: 2px;
+    padding-right: 30px;
+    transition: 0.2s linear;
+    font-weight: bold;
+    text-decoration: none;
+}
+.main-navigation a:hover {
+	color: #fff;
+}
+.link-to-pacients {
+	position: relative;
+}
+.link-to-pacients::before {
+	content:"Никулин Николай Анатольевич";
 	position: absolute;
-	bottom:2rem;
-	display:inline-block;
-	font-size:2.1rem;
-	width:50px;
-	left:50%;
-	margin-left: -25px;
-	color: #fff;
-	z-index:4;
-	height: 50px;
-	border-radius: 50%;
-	border: 1px solid transparent;
-	line-height: 50px;
-	transition: 0.2s;
-}
-.main-down:hover {
-	color:#fff;
-	border-color: #fff
-}
-/*Портфолио*/
-.portfolio{
-	padding: 10rem 0px;
-	text-align: center;
-}
-.section-header {
-	text-align: center;
-	font-weight: 800;
-	font-size: 3,6rem;
-	margin-bottom: 5rem;
-}
-.portfolio img{
-	width:100%;
-	max-width:360px;
-	box-shadow: 0px 4px 29px 0px rgba(87, 92, 97, 0.54);
-}
-.portfolio a{
-	width: 10rem;
-	display:block;
-	margin:3rem auto 6rem;
-	color: #333;
-	border-bottom: 1px solid transparent;
-}
-.portfolio a:hover {
-	text-decoration: none;
-	border-bottom: 1px dotted #333;
-}
-/* Футер */
-.footer{
-	background-color: #646464;
-	color: #fff;
-	text-align: center;
-	padding: 3rem 0;
-}
-.footer strong{
-	font-weight: 300;
-	font-size: 2.4rem;
-}
-.social-links {
-	margin-top: 1rem;
-}
-.social-links a{
-	width: 5rem;
-	height: 5rem;
-	line-height: 5rem;
-	display: inline-block;
-	color:#fff;
-	border: solid 1px #fff;
-	border-radius: 50%;
-	margin-left:1rem;
-	margin-right:1rem;
-	font-size: 2rem;
-	transition: 0.2s;
-}
-.social-links a:hover{
-	background-color: #fff;
-	color: #646464;
-}
-.offer-btn{
-	display:block;
-	width: 80%;
-	max-width: 200px;
-	margin: 1rem auto;
-	border: 1px solid #fff;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	color: #fff;
-	border-radius:100px;
-	transition: 0.2s;
-}
-.offer-btn:hover {
-	background-color: #fff;
-	color: #646464;
-	text-decoration:none;
-}
-.modal img{
-	width:100%;
-}
-.close {
-	background-color: transparent;
-	border:none;
-	font-size:2.5rem;
-	position:absolute;
-	right: 2rem;
-	top: 1rem;
-}
-.modal-title{
-	font-weight:800;
-	font-size:2rem;
-}
-.modal-btn{
-	display:inline-block;
-	border: 1px solid #333;
-	padding: 10px 20px;
-	color: #333;
-	border-radius:5px;
-}
-.modal-btn:hover{
-	background-color: #333;
-	color: #fff;
-	text-decoration: none;
-}
-@media (min-width: 0px) and (max-width: 767px){
-html{
-font-size:5px;
-}
-.footer strong {
-	margin:3rem 0;
-	display:inline-block;
-}
-.social-links a{
-	width: 5rem;
-	height: 5rem;
-	line-height: 5rem;
-	display: inline-block;
-	color:#fff;
-	border: solid 1px #fff;
-	border-radius: 50%;
-	margin-left:1rem;
-	margin-right:1rem;
-	font-size: 2rem;
-	transition: 0.2s;
-}
-.social links a{
-	font-size:1.5rem;
-}
-}
-@media (min-width: 678px) and (max-width: 991px){
-	.footer strong {
-	margin:3rem 0;
-	display:inline-block;
+	top: 65%;
+	left: -10%;
+	font-size: 10px;
+	color: #5CD9D0;
+	white-space: nowrap;
 }
 
+/*Header конец*/
+
+/*Левая колонка в историях болезни*/
+
+.profile {
+	margin-bottom: 60px;
 }
+.person-menu {
+	float: left;
+	width: 300px;
+	text-align: center;
+	border: 1px white solid;
+}
+.how-long-sickness-value,
+.town-value {
+	color: #5CD9D0;
+}
+.avatar-cover {
+	display: inline-block;
+	width: 201px;
+	height: 201px;
+	border: 4px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.avatar {
+	width: 100%;
+	height: auto;
+}
+.social-person {
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	vertical-align: top;
+	margin-right: 5px;
+}
+.person-vk {
+	background: url("../img/vkontakte_icon.png") center no-repeat;
+}
+.person-fb {
+	background: url("../img/facebook_icon.png") center no-repeat;
+}
+.person-youtube {
+	background: url("../img/youtube_icon.png") center no-repeat;
+}
+.profile-links a {
+	color: #fff;
+	font-family: 'Rubik', sans-serif;
+	display: block;
+	float: right;
+	margin-right: 30px;
+	margin-left: 60px;
+}
+.profile-links a:last-child {
+    margin-bottom: 30px;
+}
+a.active-page-person {
+	font-weight: bold;
+	color: #E7AA74;
+}
+.profile-links a:hover {
+	color: #E7AA74;
+}
+/*Конец левой колонки в историях болезни*/
+
+/*Правая колонка в историях болезни*/
+
+.person-content {
+	float: right;
+	width: 636px;
+	border: 1px white solid;
+}
+
+.blog-img {
+	width: 100%;
+	height: auto;
+}
+.img-blog-cover {
+	font-size: 0;
+	line-height: 0;
+}
+/*Конец правой колонки в историях болезни*/
+
+/*Футер*/
+
+footer {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	background-color: #202020;
+}
+.social-buttons {
+	margin: 0 auto;
+	width: 100px;
+	font-size: 0;
+	transform: translateX(-50%)
+}
+.socialYT,
+.socialVK
+ {
+	display: inline-block;
+    width: 50px;
+    height: 50px;
+    vertical-align: top;
+}
+.socialYT {
+    background: url(../img/40x40grayYTUBE.png) center no-repeat;
+}
+.socialVK {
+    background: url(../img/40x40grayVK.png) center no-repeat;
+}
+.socialYT:hover {
+	background: url(../img/40x40whiteYT.png) center no-repeat;
+}
+.socialVK:hover {
+    background: url(../img/40x40whiteVK.png) center no-repeat;
+}
+/*Конец Футера*/
+
+/*Карточки больных (страница)*/
+.filters-container {
+	text-align: center;
+}
+.filter {
+	display: inline-block;
+  	padding: 10px 33px;
+  	border: none;
+  	cursor: pointer;
+  	font-weight: 700;
+  	font-size: 14px;
+  	line-height: 24px;
+  	color: #fff;
+  	text-decoration: none;
+  	vertical-align: top;
+  	text-align: center;
+  	margin-right: 16px;
+  	border: 1px white solid;
+}
+.filter:hover {
+	color: #000;
+	background-color: #fff;
+}
+.filters-container span{
+	display: inline-block;
+	padding: 10px 33px;
+}
+.sort-container {
+	text-align: center;
+}
+.sort-container a{
+	text-decoration: none;
+	color: #fff;
+}
+a.active-sort {
+	text-decoration: underline;
+}
+
+/*Карточка больного в поиске*/
+.pacients-cards-container {
+	font-size: 0;
+	text-align: center;
+}
+.pacient-card {
+	display: inline-block;
+	width: 218px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	line-height: 20px;
+	font-size: 16px;
+	padding: 10px 10px;
+}
+.pacient-card-avatar-container {
+	display: inline-block;
+	width: 201px;
+	height: 201px;
+	border: 4px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.pacient-card-avatar {
+	width: 100%;
+	height: auto;
+}
+.link-to-person {
+	color: #E7AA74;
+}
+
+/*Конец карточки больного в поиске*/
+
+/*Конец Карточки больных (страница)*/
